@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: raw_data  # high level name of source
+    schema: SF_SCHEMA  #sch of source
+    database: SNOWFLAKE_DBT_DATA  # db of source
+    tables:
+      - name: Cust   #logical name
+        identifier: CUSTOMER  #actula table name
+      
+  - name : raw_data2
+    schema: PROD_SCH  #sch of source
+    database: SNOWFLAKE_DBT_DATA  # db of source
+    tables:
+      - name : prod
+        identifier: PRODUCT
+
+      
